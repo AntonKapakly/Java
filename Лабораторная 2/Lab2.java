@@ -23,13 +23,13 @@ public class Lab2 {
         return maxColumn;
     }
 
-    public static int[][] delMaxCol (int N, int M, int maxCollumn, int[][] array) {
+    public static int[][] delMaxCol (int N, int M, int maxColumn, int[][] array) {
         int[][] newArray = new int[M][N-1];
         for (int i = 0; i < M; i++)
             for (int j = 0; j < N; j++) {
-                if (j == maxCollumn)
+                if (j == maxColumn)
                     continue;
-                if (j > maxCollumn)
+                if (j > maxColumn)
                     newArray[i][j-1] = array[i][j];
                 else
                     newArray[i][j] = array[i][j];
