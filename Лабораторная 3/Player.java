@@ -1,6 +1,6 @@
 public class Player {
 
-    Card[] cards = Deck.getCards();
+    private Card[] cards = Deck.getCards();
     private int start = -1;
 
     public void addCard(Card card) {
