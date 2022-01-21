@@ -5,7 +5,6 @@ public class Player {
 
     public void addCard(Card card) {
         int index = start;
-        System.out.println(card.getValue());
         int i = cards[card.getValue()].getValue();
         if (index == -1) {
             start = i;
