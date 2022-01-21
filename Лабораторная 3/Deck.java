@@ -2,16 +2,12 @@ public class Deck {
 
     private final int n = 36;
     private Card[] cards;
-    private static Card[] deckOfCards;
 
     public Deck() {
         cards = new Card[n];
-        deckOfCards = new Card[n];
         for (int i = 0; i < n; i++) {
             cards[i] = new Card(i);
-            deckOfCards[i] = cards[i];
         }
-
     }
 
     public void printAll() {
@@ -33,7 +29,7 @@ public class Deck {
     }
 
     public static Card[] getCards() {
-        return deckOfCards;
+        return (new Deck()).cards;
     }
 
     public void splitCards(Player p1, Player p2) {

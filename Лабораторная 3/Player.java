@@ -10,23 +10,23 @@ public class Player {
             start = i;
             return;
         }
-        Card card1 = cards[index];
-        int next = card1.getNext();
+        Card c = cards[index];
+        int next = c.getNext();
         while (next != -1) {
             index = next;
-            card1 = cards[index];
-            next = card1.getNext();
+            c = cards[index];
+            next = c.getNext();
         }
-        card1.setNext(i);
+        c.setNext(i);
     }
 
     public void print() {
         int next = start;
         while (next != -1) {
-            Card card = cards[next];
-            card.print();
+            Card c = cards[next];
+            c.print();
             System.out.print(" ");
-            next = card.getNext();
+            next = c.getNext();
         }
         System.out.println("\n");
     }
